@@ -153,7 +153,6 @@ import javax.print.DocFlavor.STRING;
 //                 rt--;
 //             }
 //             String tmp = String.valueOf(s);
-               
 //             answer.add(tmp);
 //         }
 //         for(String a : answer){
@@ -161,8 +160,6 @@ import javax.print.DocFlavor.STRING;
 //         }
 //     }
 // }
-
-
 
 // String - 5. 특정문자 뒤집기
 // 문자열 입력받으면
@@ -196,32 +193,72 @@ import javax.print.DocFlavor.STRING;
 // 1. 각 문자열 문자배열로 만들어주고
 // 2. 문자가 영어인지 특수 문자인지 구별
 // 3. rt lt 각각 이동하면서 두 위치의 값이 모두 영어이면 뒤집기 실행
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        char[] c = str.toCharArray();
-        int lt = 0;
-        int rt = str.length() -1;
-        while(lt<rt){
-            if(!Character.isAlphabetic(c[lt])){
-                lt ++;
-            }else if(!Character.isAlphabetic(c[rt])){
-                rt--;
-            }else{
-                char tmp = c[lt];
-                c[lt] = c[rt];
-                c[rt] = tmp;
-                lt++;
-                rt--;
-            }
-        }
-        String tmp = String.valueOf(c);
-        System.out.println(tmp);
-    }
-}
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String str = sc.nextLine();
+//         char[] c = str.toCharArray();
+//         int lt = 0;
+//         int rt = str.length() -1;
+//         while(lt<rt){
+//             if(!Character.isAlphabetic(c[lt])){
+//                 lt ++;
+//             }else if(!Character.isAlphabetic(c[rt])){
+//                 rt--;
+//             }else{
+//                 char tmp = c[lt];
+//                 c[lt] = c[rt];
+//                 c[rt] = tmp;
+//                 lt++;
+//                 rt--;
+//             }
+//         }
+//         String tmp = String.valueOf(c);
+//         System.out.println(tmp);
+//     }
+// }
 
+// String - 6. 중복문자제거
+// IndexOf 정리
+// CahrAt 정리
 
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String str = sc.next();
+//         String answer = "";
+//         for(int i=0; i<str.length(); i++){
+//             // System.out.println(str.charAt(i)+ "  " + i + "  " + str.indexOf(str.charAt(i)) );
+//             if (i==str.indexOf(str.charAt(i))) {
+//                 answer += str.charAt(i);
+//             }
+//         }
+//         System.out.println(answer);
+//     }
+// }
 
+// String - 7.회문 문자열 (나의 솔루션션)
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String str = sc.next();
+//         str =str.toLowerCase();
+//         String answer = "";
+//         int lt = 0;
+//         int rt = str.length()-1;
+//         char[] c = str.toCharArray();
+//         while(lt<rt){
+//             if(c[lt]!=c[rt]){
+//                 answer = "NO";
+//                 break;
+//             }else{
+//                 lt++;
+//                 rt--;
+//             }
+//             answer = "YES";
+//         }
+//         System.out.println(answer);
+//     }
+// }
 
 
