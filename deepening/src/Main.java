@@ -261,4 +261,34 @@ import javax.print.DocFlavor.STRING;
 //     }
 // }
 
+// String - 8. 유효한 팰린드롬
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        char[] c = str.toCharArray();
+        // for(char x: c){
+        //     System.out.println(x);
+        // }
+        int lt = 0;
+        int rt = str.length() -1;
+        while(lt<rt){
+            if(!Character.isAlphabetic(c[lt])){
+                lt++;
+            }else if(!Character.isAlphabetic(c[rt])){
+                rt--;
+            }else{
+                if(c[lt]!=c[rt]){
+                    System.out.println("NO");
+                    break;
+                }else{
+                    lt++;
+                    rt--;
+                }
+            }
+        }
+        System.out.println("Yes");
+    }
+    
+}
 
